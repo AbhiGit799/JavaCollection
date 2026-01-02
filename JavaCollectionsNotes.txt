@@ -1,0 +1,74 @@
+Collections Framework
+---------------------
+
+Intro
+=====
+Iterable <--Interface
+Collection <--Interface
+
+Interfaces (5)
+==============
+Collection:Root interface for most collections.
+List:Ordered collection (e.g. ArrayList,LinkedList)
+Set:Unordered collection with no duplicates (e.g. HashSet,TreeSet)
+Queue:For holding elements prior to processing (e.g. PriorityQueue)
+Map: Key-Value pairs(e.g. HashMap,TreeMap)
+
+
+Classes
+=========
+ArrayList: Resizable array implementation of List.
+LinkedList: Doubly-linked list implementation.
+HashSet: Implements Set using a hash table.
+TreeSet: Implements Set using a tree for sorted order.
+HashMap: Implements Map using a hash table.
+TreeMap: Implements Map with sorted keys
+
+============================================================================================================================
+
+ArrayList
+==========
+
+
+
+============================================================================================================================
+
+
+PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+
+============================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

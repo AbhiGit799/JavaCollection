@@ -1,0 +1,73 @@
+In Java, ArrayDeque is a resizable array-based implementation of the Deque interface that allows efficient insertion and removal of elements from both ends.
+It can be used as a stack (LIFO) or a queue (FIFO), is faster than LinkedList for most operations, but is not thread-safe
+
+
+🔹 What is ArrayDeque?
+Definition: A double-ended queue (deque) implemented using a resizable array.
+Package: java.util
+Key Feature: Supports adding/removing elements at both ends in O(1) time.
+Declaration Example:
+ArrayDeque<Integer> deque = new ArrayDeque<>();
+
+🔹 Core Characteristics
+Resizable: Grows dynamically as needed; no fixed capacity limit.
+Nulls not allowed: You cannot store null elements.
+Not thread-safe: Requires external synchronization for concurrent use.
+Performance:
+=Faster than LinkedList for queue operations (cache-friendly).
+=Faster than Stack when used as a stack
+
+
+
+🔹 Common Operations
+=====================
+Operation	          Method	                                  Description
+Add at front	      addFirst(e) / offerFirst(e)	          Inserts element at head
+Add at end	          addLast(e) / offerLast(e)               Inserts element at tail
+Remove from front	  removeFirst() / pollFirst()	          Removes head element
+Remove from end	      removeLast() / pollLast()	              Removes tail element
+Peek front	          peekFirst()	                          Retrieves head without removing
+Peek end	          peekLast()	                          Retrieves tail without removing
+
+import java.util.ArrayDeque;
+
+public class Demo {
+    public static void main(String[] args) {
+        ArrayDeque<String> deque = new ArrayDeque<>();
+
+        // Add elements
+        deque.addFirst("A");
+        deque.addLast("B");
+        deque.addLast("C");
+
+        // Remove elements
+        System.out.println(deque.removeFirst()); // A
+        System.out.println(deque.removeLast());  // C
+
+        // Peek
+        System.out.println(deque.peekFirst());   // B
+    }
+}
+
+
+🔹 When to Use ArrayDeque
+✅ As a stack (instead of Stack class).
+✅ As a queue (instead of LinkedList).
+❌ Avoid when you need thread safety → use ConcurrentLinkedDeque instead.
+❌ Avoid storing null values.
+
+
+
+
+⚠️ Limitations & Risks
+Not thread-safe: Must wrap with synchronization if used in multithreaded environments.
+No nulls: Attempting to insert null throws NullPointerException.
+Capacity growth: Though dynamic, resizing may cause temporary overhead.
+
+
+In short:
+ArrayDeque is a high-performance, flexible alternative to Stack and LinkedList for implementing stacks and queues in Java.
+It’s ideal for single-threaded scenarios where speed and simplicity matter
+
+
+

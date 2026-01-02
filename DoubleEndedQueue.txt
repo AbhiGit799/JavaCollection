@@ -1,0 +1,66 @@
+In Java, a double-ended-queue is represented by the Deque<E> interface pronounced "deck".
+A Deque supports insertion and removal of elements at both ends (front and back) so it can act
+as a queue (FIFO) or a stack (LIFO).
+
+
+For queue-style (tail in, head out) => offer(e),poll(),peek()
+
+For stack-style (push/pop top=head) => push(e),pop(),peek()
+
+
+🔑 Key Points About Deque in Java
+==================================
+Definition: Deque stands for double-ended queue and is pronounced "deck".
+Package: Found in java.util.
+Flexibility: Can be used as both a queue (insert at rear, remove from front) and a stack (insert/remove from front).
+Implementations: Common classes are:
+a) ArrayDeque (resizable array-based, faster than Stack and LinkedList for stack operations).
+b) LinkedList (linked-node based, supports all Deque operations).
+Thread Safety: Most implementations are not thread-safe; synchronization is needed for concurrent use.
+Null Handling: Some implementations (like ArrayDeque) do not allow null elements.
+Use isEmpty() to test emptiness, not peek()==null
+
+
+
+
+📋 Common Methods in Deque
+Method	            Description
+addFirst(e) 	Inserts element at the front
+addLast(e)	    Inserts element at the rear
+removeFirst()	Removes and returns front element
+removeLast()	Removes and returns rear element
+peekFirst()	    Retrieves front element without removing
+peekLast()	    Retrieves rear element without removing
+offerFirst(e)	Inserts at front, returns true/false
+offerLast(e)	Inserts at rear, returns true/false
+
+
+⚡ Why Use Deque?
+Versatility: Works as both stack and queue.
+Performance: ArrayDeque is faster than Stack and LinkedList for most operations.
+Dynamic Size: No fixed capacity unless specified.
+
+
+API Quick Reference(most used)
+------------------------------
+Insert => addFirst, addLast, offerFirst, offerLast, offer
+Remove => removeFirst, removeLast, pollFirst, pollLast, poll
+Inspect => getFirst,getLast,peekFirst,peekLast,peek
+Stack-Style => push,peek,pop
+Bulk iteration => iterator(){Front->Back} , descendingIterator(){Back->Front}
+Size => size(), isEmpty(), clear
+
+When to use which
+------------------
+ArrayDeque => Best default for stacks/queues/deques fast contiguous memory, low overhead, good cache locality.
+LinkedList => If you need frequent insertion/removal in the middle or list-like features
+ConcurrentLinkedDeque => Non-blocking many reader/writers.
+LinkedBlockingDeque => Producer-Consumer pattern with a capacity, blocking put/take
+
+
+
+
+
+
+
+
