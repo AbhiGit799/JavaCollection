@@ -1,0 +1,16 @@
+In Java's collection framework, peek and poll are methods primarily associated with the queue interface (and the extended Deque interface).
+They are used to interact with the head(first element) of the collection.
+
+peek() => Retrieves, but does not remove, the head of the queue.
+
+poll() => Retrieves and removes the head of the queue.
+
+poll() modifies the collection by removing the element it retrieves.
+
+Error Handling: Both methods are considered "Safe" operations because they return a special value(null)
+if the queue is empty, rather than throwing an exception.
+
+
+Alternative methods
+element() is similar to peek() but throws a NoSuchElementException if the queue is empty.
+remove() is similar to poll() but throws a NoSuchElementException if the queue is empty.
