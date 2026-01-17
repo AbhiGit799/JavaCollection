@@ -1,0 +1,51 @@
+The entrySet() method in Java is a core part of the Map interface.
+It provides a Set view of all the key-value mappings (entries) contained within the map.
+Each element in the returned Set is an object of type Map.Entry<K, V>, which encapsulates a single key-value pair.
+
+
+Key Characteristics
+=====================
+
+1) Return Type: Set<Map.Entry<K, V>>.
+
+2) Purpose: The primary use of entrySet() is to efficiently iterate over both the keys and values of a map simultaneously.
+
+3) Backed by the Map: The returned set is a view of the original map, meaning any structural changes to the set
+(e.g., removing an entry using the iterator's remove() method) are reflected in the map, and vice versa.
+
+4) Efficiency: Iterating using entrySet() is generally more efficient than iterating over the keys using keySet() and then calling get() for each value,
+as it avoids redundant key lookups.
+
+
+Usage Example
+==============
+Map.Entry is commonly used when iterating over a map's elements, offering a more efficient approach than repeatedly calling get(key) after iterating through the key set.
+Below is an example demonstrating iteration using entrySet():
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapEntryExample {
+    public static void main(String[] args) {
+        Map<String, String> capitalCities = new HashMap<>();
+        capitalCities.put("England", "London");
+        capitalCities.put("Germany", "Berlin");
+        capitalCities.put("Norway", "Oslo");
+
+        // Iterate using the entrySet() and for-each loop
+        for (Map.Entry<String, String> entry : capitalCities.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

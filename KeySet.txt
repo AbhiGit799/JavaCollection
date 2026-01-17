@@ -1,0 +1,38 @@
+The keySet() method in Java is a core part of the Map interface (found in the java.util package)
+
+Its primary function is to provide a Set view of all the keys contained within the map.
+
+
+Key Characteristics
+====================
+
+1) Returns a Set: The method returns a Set<K>, where K is the type of the keys in the map.
+The keys are guaranteed to be unique, as is the nature of a Set and a Map's key constraint.
+
+
+2) Backed by the Map: The returned Set is a view of the original map, meaning changes to the Set
+(e.g., removing a key using remove()) are reflected in the original map, and vice-versa.
+
+3) Used for Iteration: It is commonly used to iterate over all the keys in a map, often in combination with the get() method to access the corresponding values.
+For iterating through both keys and values, the entrySet() method is generally more performant, especially for large maps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

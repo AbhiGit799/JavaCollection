@@ -1,0 +1,33 @@
+The Map.Entry<K, V> is a nested interface in Java that represents a single key-value pair (or mapping) within a Map collection.
+The K stands for the type of the key and V stands for the type of the value.
+
+
+You cannot directly instantiate a Map.Entry interface.
+Instead, you obtain Map.Entry instances primarily by calling the entrySet() method on a Map instance, which returns a Set view of the map's entries.
+
+
+Key Methods
+The Map.Entry interface includes methods such as getKey(), getValue(), and setValue(V value) to access and modify the entry's key and value.
+It also provides equals(Object o) and hashCode() for comparing entries, as well as static comparators like comparingByKey() for sorting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
